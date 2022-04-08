@@ -14,6 +14,7 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('MOVIE_DETAILS', movieDetails)
 }
 
 function* fetchAllMovies() {
@@ -52,6 +53,9 @@ const genres = (state = [], action) => {
     }
 }
 
+const details = (state = {}, action) => {
+    
+}
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
