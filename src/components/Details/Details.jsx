@@ -5,13 +5,13 @@ import { Card, CardHeader, CardMedia, Button, CardContent } from '@mui/material'
 function Details () {
     const movieArray = useSelector(store => store.details);
     const movie = movieArray[0];
+    const genres = movieArray.map(movie => movie.name);
     const history = useHistory();
 
-    console.log(movieArray, movie);
     return(<>
-            <Button>Return to Movie List</Button>
+            <Button onClick={() => history.push('/')}>Return to Movie List</Button>
             <Card variant="outlined">
-                {/* <CardMedia
+                <CardMedia
                     component="img"
                     height="300"
                     image={movie.poster}
@@ -22,8 +22,11 @@ function Details () {
                 </CardHeader>
                 <CardContent>
                     <p>{movie.description}</p>
-
-                </CardContent> */}
+                    <p>GENRES:</p>
+                    {genres.map((genre, i) => {
+                        return(<li key={i}>{genre}</li>)
+                    })}
+                </CardContent>
         </Card>
     
     </>)
