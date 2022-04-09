@@ -13,7 +13,7 @@ function Details () {
             <Card variant="outlined">
                 <CardMedia
                     component="img"
-                    height="300"
+                    height="500"
                     image={movie.poster}
                     alt={movie.title}
                 />
