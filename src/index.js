@@ -34,9 +34,9 @@ function* movieDetails(action) {
     //sets the state of detail reducer to the selected movie item
     try {
         let response = yield axios.get(`/api/movie/${action.payload.id}`)
-        // yield put({ type: 'SET_DETAIL', payload: response.data})
+        yield put({ type: 'SET_DETAIL', payload: response.data})
     } catch (error) {
-        
+        console.log('error in *movieDetails: ', error)
     }
 }
 

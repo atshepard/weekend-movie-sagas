@@ -20,11 +20,14 @@ router.get('/:id', (req, res) => {
 let id = req.params.id
 
 let queryText = 
-``
+`SELECT "movies".title, "movies".poster, "movies".description, "name" from "genres"
+JOIN "movies_genres" ON "genres".id = "movies_genres".genre_id
+JOIN "movies" ON "movies_genres".movie_id = "movies".id
+WHERE "movies".id = $1;`
 
 pool.query(queryText, [id])
 .then( result => {
-  console.log(result.rows);
+  res.send(result.rows);
 })
 .catch(err => {
   console.log('ERROR: Get details', err);
