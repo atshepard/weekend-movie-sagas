@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../modules/pool')
 
 router.get('/', (req, res) => {
-
+//gets full movie list
   const query = `SELECT * FROM movies ORDER BY "title" ASC`;
   pool.query(query)
     .then( result => {
@@ -13,6 +13,27 @@ router.get('/', (req, res) => {
       console.log('ERROR: Get all movies', err);
       res.sendStatus(500)
     })
+
+});
+
+router.get('/:id', (req, res) => {
+let id = req.params.id
+//gets the movie and all associated genres
+let queryText = 
+`SELECT "movies".title, "movies".poster, "movies".description, "name" from "genres"
+JOIN "movies_genres" ON "genres".id = "movies_genres".genre_id
+JOIN "movies" ON "movies_genres".movie_id = "movies".id
+WHERE "movies".id = $1;`
+
+pool.query(queryText, [id])
+.then( result => {
+  res.send(result.rows);
+})
+.catch(err => {
+  console.log('ERROR: Get details', err);
+  res.sendStatus(500)
+})
+
 
 });
 
