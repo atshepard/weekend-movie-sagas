@@ -29,7 +29,7 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
+
 }
 
 //gets data for the specific MovieItem
@@ -37,7 +37,7 @@ function* movieDetails(action) {
     //sets the state of detail reducer to the selected movie item
     try {
         let response = yield axios.get(`/api/movie/${action.payload.id}`)
-        yield put({ type: 'SET_DETAIL', payload: response.data})
+        yield put({ type: 'SET_DETAIL', payload: response.data })
     } catch (error) {
         console.log('error in *movieDetails: ', error)
     }
@@ -48,7 +48,7 @@ function* fetchGenres() {
     try {
         const genres = yield axios.get('/api/genre');
         console.log('get all genres:', genres.data);
-        yield put ({type: 'SET_GENRES', payload: genres.data})
+        yield put({ type: 'SET_GENRES', payload: genres.data })
     } catch (error) {
         console.log('error in *fetchGenres: ', error);
     }
@@ -103,7 +103,7 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={storeInstance}>
-        <App />
+            <App />
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')

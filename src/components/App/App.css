@@ -44,5 +44,5 @@ h1 {
 
 .MuiCardMedia-img {
   background-size: contain;
-  height: auto;
+  height: 50%
 }
