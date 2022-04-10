@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  color: 20498a;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #222;
 }
 
 .App-title {
@@ -13,15 +13,20 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .movieContainer {
   margin: 50px;
 }
 
-.detailContainer{
+.detailContainer {
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 50px;
@@ -33,4 +38,6 @@ h1 {
   height: 75px;
   padding: 50px;
   margin: 0px;
+  color: antiquewhite;
+  text-transform: capitalize;
 }

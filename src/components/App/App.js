@@ -10,13 +10,13 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#aa9d94',
+        main: '#c0c1c1',
       },
       secondary: {
-        main: '#bbada1',
+        main: '#7e1616',
       },
       info: {
-        main: '#20498a',
+        main: '#fcc252',
       },
     },
   });
@@ -27,7 +27,7 @@ function App() {
       <div className="App">
         <Header />
         <Router>
-          
+
           <Route path="/" exact>
             <MovieList />
           </Route>
