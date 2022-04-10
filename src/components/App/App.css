@@ -1,7 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #222;
-  color: white;
 }
 
 .App-title {
@@ -13,10 +13,36 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .movieContainer {
   margin: 50px;
+}
+
+.detailContainer {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+}
+
+h1 {
+  background-image: url("/public/images/stagecurtains.jpeg");
+  object-fit: contain;
+  height: 75px;
+  padding: 50px;
+  margin: 0px;
+  color: antiquewhite;
+  text-transform: capitalize;
+}
+
+.MuiCardMedia-img {
+  background-size: contain;
+  height: auto;
 }

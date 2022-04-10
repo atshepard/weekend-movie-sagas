@@ -13,7 +13,8 @@ function MovieItem({ movie }) {
 
 
     return (<>
-        <Card variant="outlined">
+        <Card variant="outlined"
+        sx={{ boxShadow: 1 }}>
             <CardActionArea onClick={handleClick}>
                 <CardMedia
                     component="img"
