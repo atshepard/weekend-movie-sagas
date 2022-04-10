@@ -41,3 +41,8 @@ h1 {
   color: antiquewhite;
   text-transform: capitalize;
 }
+
+.MuiCardMedia-img {
+  background-size: contain;
+  height: auto;
+}
