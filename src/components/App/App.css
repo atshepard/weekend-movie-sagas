@@ -30,7 +30,7 @@
 h1 {
   background-image: url("/public/images/stagecurtains.jpeg");
   text-shadow: 10px, 10px, 10px, #222;
-  object-fit: cover;
+  object-fit: contain;
   height: 75px;
   padding: 50px;
   margin: 0px;
