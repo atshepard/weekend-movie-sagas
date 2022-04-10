@@ -26,3 +26,12 @@
   margin-right: 200px;
   margin-top: 50px;
 }
+
+h1 {
+  background-image: url("/public/images/stagecurtains.jpeg");
+  text-shadow: 10px, 10px, 10px, #222;
+  object-fit: cover;
+  height: 75px;
+  padding: 50px;
+  margin: 0px;
+}
