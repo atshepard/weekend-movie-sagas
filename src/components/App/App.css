@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: #222;
-  color: white;
+  color: 20498a;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App-title {
@@ -29,7 +29,6 @@
 
 h1 {
   background-image: url("/public/images/stagecurtains.jpeg");
-  text-shadow: 10px, 10px, 10px, #222;
   object-fit: contain;
   height: 75px;
   padding: 50px;
