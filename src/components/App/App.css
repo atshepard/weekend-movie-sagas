@@ -20,3 +20,9 @@
 .movieContainer {
   margin: 50px;
 }
+
+.detailContainer{
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+}

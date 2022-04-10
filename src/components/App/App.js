@@ -6,11 +6,11 @@ import Details from '../Details/Details'
 function App() {
   return (
     <div className="App">
-      <h1>Film Gallery</h1>
       <Router>        
         <Route path="/" exact>
           <MovieList />
         </Route>
+
           <Route path="/details">
             <Details />
           </Route>
